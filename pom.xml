@@ -9,6 +9,7 @@
     <version>1.0.0</version>
     <modules>
         <module>cloud-provider-payment</module>
+        <module>cloud-consumer-order</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -75,6 +76,18 @@
     </dependencyManagement>
 
     <build>
+ <finalName>cloud2020</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
+
+            </plugin>
+        </plugins>
 
     </build>
 </project>
